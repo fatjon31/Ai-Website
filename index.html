@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michelangelo's Masterpieces</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+     <script src="js/main.js" defer></script> 
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <h1>Michelangelo's Art</h1>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#david-section">David</a></li>
+                <li><a href="#pieta-section">Pietà</a></li>
+                <li><a href="#moses-section">Moses</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('IMG/Screenshot\ 2024-11-28\ 124440.png'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>Michelangelo's Masterpieces</h1>
+            <p>Step into the world of Renaissance brilliance and experience Michelangelo's masterpieces like never before. 
+                From the awe-inspiring David to the tender Pietà, explore the
+                 genius of one of history's greatest artists through interactive 3D models.
+                  Immerse yourself in the intricate details, emotion, and craftsmanship that defined
+                   Michelangelo's work, 
+                 bringing his timeless sculptures to life in a dynamic and engaging way. 
+                 Perfect for art enthusiasts, students, and curious minds,
+                  this journey offers a unique perspective on the legacy of a true artistic visionary.</p>
+            <button onclick="scrollToModels()">Start Exploring</button>
+        </div>
+    </section>
+
+    <!-- Model Sections -->
+    <section class="model-section" id="david-section">
+        <div class="container">
+            <div class="main-content">
+                <div class="info-container">
+                    <h2>David (1501-1504)</h2>
+                    <div class="description">
+                        <p>David is a masterpiece of Renaissance sculpture created between 1501 and 1504,
+                             by the Italian artist Michelangelo. It is a 5.17-metre (17.0 ft) marble statue 
+                             of a standing male nude. The statue represents the Biblical hero David, 
+                             a favoured subject in the art of Florence. It is possible that the David 
+                             was conceived as a political statue before Michelangelo began to work on it. 
+                             Certainly David the giant-killer had long been seen as a political figure in Florence, 
+                             and images of the Biblical hero already carried political implications there.
+                    </div>
+                </div>
+                <div class="model-container" id="david">
+                <model-viewer alt="David" 
+                            src="./models/David.glb" 
+                            poster="poster.webp" shadow-intensity="1" 
+                            camera-controls touch-action="pan-y">
+                        </model-viewer>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="IMG/david1.jpg" alt="David face">
+                <img src="IMG/david2.jpg" alt="David hand">
+                <img src="IMG/david3.jpg" alt="David back  ">
+            </div>
+        </div>
+    </section>
+
+    <section class="model-section" id="pieta-section">
+        <div class="container">
+            <div class="main-content">
+                <div class="info-container">
+                    <h2>Pietà (1498-1499)</h2>
+                    <div class="description">
+                        <p>The Pietà (Italian: [madɔnna della pjeta]; "[Our Lady of] Pity"; 1498 1499) is a Carrara marble 
+                            sculpture of Jesus and Mary at Mount Golgotha representing the "Sixth Sorrow" of the Virgin Mary 
+                            by Michelangelo Buonarroti, in Saint Peter's Basilica, Vatican City, for which it was made.
+                            It is a key work of Italian Renaissance sculpture and often taken as the start of the High Renaissance. 
+                            The sculpture captures the moment when Jesus, taken down from the cross, is given to his mother 
+                            Mary. Mary looks younger than Jesus; art historians believe Michelangelo was inspired by a passage 
+                            in Dante Alighieri's Divine Comedy: "O virgin mother, daughter of your Son  your merit so ennobled 
+                            human nature that its divine Creator did not hesitate to become its creature"
+                             (Paradiso, Canto XXXIII). 
+                            Michelangelo's aesthetic interpretation of the Pietà is unprecedented in Italian sculpture because 
+                            it balances early forms of naturalism with the Renaissance ideals of classical beauty.</p>
+                        <!-- ... other paragraphs ... -->
+                    </div>
+                </div>
+                <div class="model-container" id="pieta">
+                    <model-viewer alt="Pieta" 
+                            src="./models/Pieta.glb" 
+                            poster="poster.webp" shadow-intensity="1" 
+                            camera-controls touch-action="pan-y">
+                        </model-viewer>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="IMG/pieta4.jpeg" alt="Pieta front view">
+                <img src="IMG/Pieta2.jpg" alt="Pieta side view">
+                <img src="IMG/Pieat3.jpg" alt="Pieta detail view">
+            </div>
+        </div>
+    </section>
+
+    <section class="model-section" id="moses-section">
+        <div class="container">
+            <div class="main-content">
+                <div class="info-container">
+                    <h2>Moses (1513-1515)</h2>
+                    <div class="description">
+                        <p>The Moses is a sculpture commissioned in 1505 by Pope Julius II...
+                            Moses is an imposing figure—he is nearly eight feet high sitting down! 
+                            He has enormous muscular arms and an angry, intense look in his eyes. 
+                            Under his arms he carries the tablets of the law—the stones inscribed
+                            with the Ten Commandments that he has just received from God on Mt. Sinai.
+                            You might marvel at Moses horns. This comes from a mistranslation of a
+                            Hebrew word that described Moses as having rays of light coming from his head.
+                        </p>
+                        <!-- ... other paragraphs ... -->
+                    </div>
+                </div>
+                <div class="model-container" id="moses">
+                   <model-viewer alt="Moses" 
+                            src="./models/Moses.glb" 
+                            poster="poster.webp" shadow-intensity="1" 
+                            camera-controls touch-action="pan-y">
+                        </model-viewer>
+                </div>
+            </div>
+            <div class="image-gallery">
+                <img src="IMG/moses1.jpg" alt="Moses front view">
+                <img src="IMG/moses2.jpg" alt="Moses side view">
+                <img src="IMG/moses3.jpg" alt="Moses detail view">
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-title">Test Your Knowledge</h2>
+            <div class="quiz-container">
+                <!-- Quiz questions will be dynamically inserted here -->
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎨 Ai Website
+                    </h3>
+                    <p>Bringing Renaissance masterpieces to life through technology</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="#" class="social-icon">📧</a>
+                        <a href="#" class="social-icon">📘</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#models">3D Models</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#quiz">Fun Quiz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Join Us! 🎉</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ for Ai Lovers | © 2024 Ai Website</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
