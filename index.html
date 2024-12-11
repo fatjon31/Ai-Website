@@ -60,15 +60,14 @@
                     </div>
                 </div>
                 <div class="model-container" id="david">
-                 <model-viewer alt="David" 
+                <model-viewer alt="David" 
                   src="./models/David2.glb" 
                   poster="poster.webp" 
                   shadow-intensity="1" 
                   camera-controls 
                   touch-action="pan-y" 
                   ar 
-                  ar-modes="webxr scene-viewer quick-look" 
-                  tone-mapping="neutral">
+                  ar-modes="webxr scene-viewer quick-look">
         <!-- Hotspots -->
         <button class="Hotspot" slot="hotspot-3" 
                 data-position="-1.1058542727148055m 7.470023342249108m 0.5041060459777996m" 
@@ -88,18 +87,10 @@
                 data-visibility-attribute="visible">
             <div class="HotspotAnnotation">Back</div>
         </button>
-        <!-- Progress Bar -->
-        <div class="progress-bar hide" slot="progress-bar">
-            <div class="update-bar"></div>
-        </div>
         <!-- AR Button -->
-        <button slot="ar-button" id="ar-button">
+        <button slot="ar-button">
             View in your space
         </button>
-        <!-- AR Prompt -->
-        <div id="ar-prompt">
-            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-        </div>
     </model-viewer>
             </div>
             <div class="image-gallery">
