@@ -177,30 +177,27 @@ body {
 
 /* Model Section Styles */
 
-.Hotspot {
-    background-color: #ffffff;
-    color: #333333;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+ .Hotspot {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #000;
+        border: 2px solid #555;
+        border-radius: 10px;
+        padding: 6px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
 
-.Hotspot:hover {
-    background-color: #f0f0f0;
-    border-color: #888888;
-    color: #000000;
-    transform: scale(1.1);
-}
+    .Hotspot:hover {
+        background-color: rgba(200, 200, 200, 0.9);
+        transform: scale(1.1);
+    }
 
-.Hotspot:active {
-    background-color: #e0e0e0;
-    transform: scale(1);
-}
-
+    .Hotspot:active {
+        background-color: rgba(150, 150, 150, 0.9);
+        transform: scale(1);
+    }
 .model-section {
     padding: 5rem 0;
 }
