@@ -176,6 +176,31 @@ body {
 }
 
 /* Model Section Styles */
+
+.Hotspot {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.Hotspot:hover {
+    background-color: #f0f0f0;
+    border-color: #888888;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.Hotspot:active {
+    background-color: #e0e0e0;
+    transform: scale(1);
+}
+
 .model-section {
     padding: 5rem 0;
 }
