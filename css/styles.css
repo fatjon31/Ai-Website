@@ -176,28 +176,6 @@ body {
 }
 
 /* Model Section Styles */
-
- .Hotspot {
-        background-color: rgba(255, 255, 255, 0.9);
-        color: #000;
-        border: 2px solid #555;
-        border-radius: 10px;
-        padding: 6px 10px;
-        font-size: 14px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: transform 0.2s ease, background-color 0.2s ease;
-    }
-
-    .Hotspot:hover {
-        background-color: rgba(200, 200, 200, 0.9);
-        transform: scale(1.1);
-    }
-
-    .Hotspot:active {
-        background-color: rgba(150, 150, 150, 0.9);
-        transform: scale(1);
-    }
 .model-section {
     padding: 5rem 0;
 }
