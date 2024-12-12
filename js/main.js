@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hotspots = document.querySelectorAll('.Hotspot');
 
+    document.addEventListener('DOMContentLoaded', () => {
+    const modelViewer = document.querySelector('model-viewer');
+    console.log('Model Viewer Loaded:', modelViewer);
+});
+
     hotspots.forEach(hotspot => {
         hotspot.addEventListener('click', function () {
             // Get the image source from the data attribute
