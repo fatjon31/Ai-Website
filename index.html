@@ -124,11 +124,48 @@
                     </div>
                 </div>
                 <div class="model-container" id="pieta">
-                    <model-viewer alt="Pieta" 
-                            src="./models/Pieta.glb" 
-                            poster="poster.webp" shadow-intensity="1" 
-                            camera-controls touch-action="pan-y">
-                        </model-viewer>
+                   <model-viewer alt="Pieta"
+  src="./models/Pieta.glb"
+  poster="poster.webp"
+  shadow-intensity="1"
+  camera-controls
+  touch-action="pan-y"
+  ar
+  ar-modes="webxr scene-viewer quick-look">
+  
+  <!-- Hotspots -->
+  <button class="Hotspot" slot="hotspot-1" 
+          data-position="0.14180405592089249m 1.6229816371952037m 0.01914275201544191m" 
+          data-normal="-0.09666993635542935m -0.7090288712129565m 0.6985219990748451m">
+      <div class="HotspotAnnotation">Face</div>
+  </button>
+  <button class="Hotspot" slot="hotspot-2" 
+          data-position="0.06420622768198946m 1.2524561860879602m -0.010118712488672953m" 
+          data-normal="0.7971409597860372m -0.28482262314124784m 0.5323930536533457m">
+      <div class="HotspotAnnotation">Body</div>
+  </button>
+  <button class="Hotspot" slot="hotspot-3" 
+          data-position="-0.20120376049980912m 1.276589649224605m 0.29111857938012203m" 
+          data-normal="0.6087087161166826m 0.2776177246694759m 0.7432375783509086m">
+      <div class="HotspotAnnotation">Christ</div>
+  </button>
+
+  <!-- Progress bar -->
+  <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+  </div>
+
+  <!-- AR Button -->
+  <button slot="ar-button" id="ar-button">
+      View in your space
+  </button>
+
+  <!-- AR Prompt -->
+  <div id="ar-prompt">
+      <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+  </div>
+</model-viewer>
+
                 </div>
             </div>
             <div class="image-gallery">
