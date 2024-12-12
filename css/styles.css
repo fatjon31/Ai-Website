@@ -250,6 +250,11 @@ model-viewer {
 }
 
 /* Image Gallery */
+.image-gallery img.highlight {
+    border: 3px solid var(--primary-color); /* Change the color as needed */
+    transition: border 0.5s ease-in-out;
+}
+
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
