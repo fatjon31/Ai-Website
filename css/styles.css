@@ -251,14 +251,16 @@ model-viewer {
 
 /* Image Gallery */
 
+
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
 }
+
 .image-gallery img.highlight {
-    border: 3px solid #ff9800;
-    transition: border 0.5s ease;
+    border: 3px solid #ff9800; /* Adjust the border color */
+    transition: border 0.5s ease-in-out;
 }
 
 
