@@ -1,37 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const modelViewer = document.querySelector('model-viewer');
-    const imageDisplay = document.getElementById('displayed-image');
-    const imageSection = document.getElementById('image-display');
+document.addEventListener('DOMContentLoaded', function () {
     const hotspots = document.querySelectorAll('.Hotspot');
 
-    // Add click event listeners to each hotspot
     hotspots.forEach(hotspot => {
-        hotspot.addEventListener('click', function() {
+        hotspot.addEventListener('click', function () {
             // Get the image source from the data attribute
             const imgSrc = this.getAttribute('data-img-src');
-            
+
             console.log('Hotspot clicked, image source:', imgSrc); // Debug log
 
             if (imgSrc) {
-                // Set the image source
-                imageDisplay.src = imgSrc;
-                
-                // Show the image
-                imageDisplay.style.display = 'block';
-                imageSection.style.display = 'block';
-                
-                // Optional: Scroll to the image section
-                imageSection.scrollIntoView({ behavior: 'smooth' });
+                // Find the corresponding image in the gallery
+                const targetImage = document.querySelector(`.image-gallery img[src="${imgSrc}"]`);
+
+                if (targetImage) {
+                    // Scroll to the image
+                    targetImage.scrollIntoView({ behavior: 'smooth' });
+
+                    // Optionally, highlight the image briefly
+                    targetImage.classList.add('highlight');
+                    setTimeout(() => {
+                        targetImage.classList.remove('highlight');
+                    }, 2000); // Remove highlight after 2 seconds
+                }
             }
         });
     });
-
-    // Optional: Add a way to close the image
-    imageDisplay.addEventListener('click', () => {
-        imageDisplay.style.display = 'none';
-        imageSection.style.display = 'none';
-    });
 });
+
 // Quiz Data - Michelangelo Art Questions
 const michelangeloQuizData = [
     {
