@@ -1,3 +1,20 @@
+
+// Select all hotspots and the image display section
+const hotspots = document.querySelectorAll('.Hotspot');
+const displayedImage = document.getElementById('displayed-image');
+
+// Add event listeners to each hotspot
+hotspots.forEach(hotspot => {
+    hotspot.addEventListener('click', () => {
+        // Get the image source from the data attribute
+        const imgSrc = hotspot.getAttribute('data-img-src');
+        
+        // Update the image display section
+        displayedImage.src = imgSrc;
+        displayedImage.style.display = 'block'; // Make the image visible
+    });
+});
+
 // Quiz Data - Michelangelo Art Questions
 const michelangeloQuizData = [
     {
