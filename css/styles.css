@@ -125,20 +125,6 @@ body {
     overflow: hidden;
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, var(--accent-color) 0%, transparent 50%);
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
