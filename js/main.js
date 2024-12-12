@@ -1,18 +1,16 @@
 document.querySelectorAll('.Hotspot').forEach(hotspot => {
     hotspot.addEventListener('click', function () {
-        // Get the image source from the hotspot's data attribute
+        // Get the image source from the button's data attribute
         const imgSrc = this.getAttribute('data-img-src');
-        
-        // Find the image with the matching src attribute
-        const targetImage = document.querySelector(`.image-gallery img[src='${imgSrc}']`);
-        
-        if (targetImage) {
-            // Scroll the image into view
-            targetImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-            // Optionally, add a temporary highlight
-            targetImage.classList.add('highlight');
-            setTimeout(() => targetImage.classList.remove('highlight'), 1000);
+        // Find the corresponding image in the gallery
+        const targetImage = document.querySelector(`.image-gallery img[src='${imgSrc}']`);
+
+        if (targetImage) {
+            // Scroll the image into view smoothly
+            targetImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            console.error(`No image found for source: ${imgSrc}`);
         }
     });
 });
