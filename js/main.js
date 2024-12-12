@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
 // Quiz Data - Michelangelo Art Questions
 const michelangeloQuizData = [
     {
