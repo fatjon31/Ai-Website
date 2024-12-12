@@ -1,15 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hotspots = document.querySelectorAll('.Hotspot');
-
-    document.addEventListener('DOMContentLoaded', () => {
     const modelViewer = document.querySelector('model-viewer');
-    console.log('Model Viewer Loaded:', modelViewer);
-});
 
+    // Debugging: Check if the model-viewer is loaded
+    if (!modelViewer) {
+        console.error('Model Viewer element is missing.');
+        return;
+    }
+    console.log('Model Viewer Loaded:', modelViewer);
+
+    // Hotspot click handler
     hotspots.forEach(hotspot => {
         hotspot.addEventListener('click', function () {
-            // Get the image source from the data attribute
+            // Get the image source from the hotspot's data attribute
             const imgSrc = this.getAttribute('data-img-src');
+
             if (imgSrc) {
                 // Find the corresponding image in the gallery
                 const targetImage = document.querySelector(`.image-gallery img[src="${imgSrc}"]`);
