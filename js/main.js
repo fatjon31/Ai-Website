@@ -5,23 +5,24 @@ document.addEventListener('DOMContentLoaded', function () {
         hotspot.addEventListener('click', function () {
             // Get the image source from the data attribute
             const imgSrc = this.getAttribute('data-img-src');
-
-            console.log('Hotspot clicked, image source:', imgSrc); // Debug log
-
             if (imgSrc) {
                 // Find the corresponding image in the gallery
                 const targetImage = document.querySelector(`.image-gallery img[src="${imgSrc}"]`);
 
                 if (targetImage) {
                     // Scroll to the image
-                    targetImage.scrollIntoView({ behavior: 'smooth' });
+                    targetImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                    // Optionally, highlight the image briefly
+                    // Optional: Highlight the image briefly
                     targetImage.classList.add('highlight');
                     setTimeout(() => {
                         targetImage.classList.remove('highlight');
                     }, 2000); // Remove highlight after 2 seconds
+                } else {
+                    console.warn(`No image found in the gallery for source: ${imgSrc}`);
                 }
+            } else {
+                console.warn('Hotspot does not have a valid data-img-src attribute.');
             }
         });
     });
