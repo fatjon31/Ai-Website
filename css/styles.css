@@ -176,6 +176,24 @@ body {
 }
 
 /* Model Section Styles */
+#image-display {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+#displayed-image {
+    max-width: 90%;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#displayed-image:hover {
+    transform: scale(1.05);
+}
+
 .Hotspot {
     display: flex;
     align-items: center;
