@@ -69,24 +69,26 @@
   ar 
   ar-modes="webxr scene-viewer quick-look">
     <!-- Hotspots -->
-    <button class="Hotspot" slot="hotspot-3" 
-            data-position="-1.1058542727148055m 7.470023342249108m 0.5041060459777996m" 
-            data-normal="-0.6080913884780568m -0.4683947181520168m 0.6409611932606544m" 
-            data-img-src="./IMG/david2.jpg">
+   <!-- Hotspots -->
+<div class="hotspots">
+    <button class="Hotspot" data-img-src="IMG/david1.jpg" data-position="-1.1058542727148055m 7.470023342249108m 0.5041060459777996m">
         <div class="hotspot-label">Hand</div>
     </button>
-    <button class="Hotspot" slot="hotspot-4" 
-            data-position="-0.5367858161019194m 9.79293391769283m 0.3975268660791557m" 
-            data-normal="-0.35380166974634164m -0.5691592078528105m 0.7422143724026515m" 
-            data-img-src="./IMG/david1.jpg">
+    <button class="Hotspot" data-img-src="IMG/david2.jpg" data-position="-0.5367858161019194m 9.79293391769283m 0.3975268660791557m">
         <div class="hotspot-label">Head</div>
     </button>
-    <button class="Hotspot" slot="hotspot-5" 
-            data-position="-0.648899817839772m 8.654023281762202m -0.12514723340299616m" 
-            data-normal="-0.27402523449731186m -0.40247456316792674m -0.8734554349601814m" 
-            data-img-src="./IMG/david3.jpg">
+    <button class="Hotspot" data-img-src="IMG/david3.jpg" data-position="-0.648899817839772m 8.654023281762202m -0.12514723340299616m">
         <div class="hotspot-label">Back</div>
     </button>
+</div>
+
+<!-- Image Gallery -->
+<div class="image-gallery">
+    <img src="IMG/david1.jpg" alt="David hand">
+    <img src="IMG/david2.jpg" alt="David head">
+    <img src="IMG/david3.jpg" alt="David back">
+</div>
+
 </model-viewer>
 
 <!-- Section to display the image -->
