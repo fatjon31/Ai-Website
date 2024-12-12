@@ -2,26 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const modelViewer = document.querySelector('model-viewer');
     const imageDisplay = document.getElementById('displayed-image');
     const imageSection = document.getElementById('image-display');
+    const hotspots = document.querySelectorAll('.Hotspot');
 
-    modelViewer.addEventListener('hotspot-click', (event) => {
-        // Get the image source from the clicked hotspot
-        const imgSrc = event.target.dataset.imgSrc;
-        
-        if (imgSrc) {
-            // Set the image source
-            imageDisplay.src = imgSrc;
+    hotspots.forEach(hotspot => {
+        hotspot.addEventListener('click', function() {
+            // Get the image source from the button itself
+            const imgSrc = this.getAttribute('data-img-src');
             
-            // Show the image
-            imageDisplay.style.display = 'block';
-            
-            // Optional: Scroll to the image section
-            imageSection.scrollIntoView({ behavior: 'smooth' });
-        }
+            console.log('Hotspot clicked, image source:', imgSrc); // Debug log
+
+            if (imgSrc) {
+                // Set the image source
+                imageDisplay.src = imgSrc;
+                
+                // Show the image
+                imageDisplay.style.display = 'block';
+                imageSection.style.display = 'block';
+                
+                // Optional: Scroll to the image section
+                imageSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
     });
 
-    // Optional: Add a close or hide functionality
+    // Optional: Add a way to close the image
     imageDisplay.addEventListener('click', () => {
         imageDisplay.style.display = 'none';
+        imageSection.style.display = 'none';
     });
 });
 // Quiz Data - Michelangelo Art Questions
