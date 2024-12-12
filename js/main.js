@@ -4,9 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageSection = document.getElementById('image-display');
     const hotspots = document.querySelectorAll('.Hotspot');
 
+    // Add click event listeners to each hotspot
     hotspots.forEach(hotspot => {
         hotspot.addEventListener('click', function() {
-            // Get the image source from the button itself
+            // Get the image source from the data attribute
             const imgSrc = this.getAttribute('data-img-src');
             
             console.log('Hotspot clicked, image source:', imgSrc); // Debug log
