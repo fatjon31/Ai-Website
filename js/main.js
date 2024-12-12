@@ -1,20 +1,29 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const modelViewer = document.querySelector('model-viewer');
+    const imageDisplay = document.getElementById('displayed-image');
+    const imageSection = document.getElementById('image-display');
 
-// Select all hotspots and the image display section
-const hotspots = document.querySelectorAll('.Hotspot');
-const displayedImage = document.getElementById('displayed-image');
-
-// Add event listeners to each hotspot
-hotspots.forEach(hotspot => {
-    hotspot.addEventListener('click', () => {
-        // Get the image source from the data attribute
-        const imgSrc = hotspot.getAttribute('data-img-src');
+    modelViewer.addEventListener('hotspot-click', (event) => {
+        // Get the image source from the clicked hotspot
+        const imgSrc = event.target.dataset.imgSrc;
         
-        // Update the image display section
-        displayedImage.src = imgSrc;
-        displayedImage.style.display = 'block'; // Make the image visible
+        if (imgSrc) {
+            // Set the image source
+            imageDisplay.src = imgSrc;
+            
+            // Show the image
+            imageDisplay.style.display = 'block';
+            
+            // Optional: Scroll to the image section
+            imageSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    // Optional: Add a close or hide functionality
+    imageDisplay.addEventListener('click', () => {
+        imageDisplay.style.display = 'none';
     });
 });
-
 // Quiz Data - Michelangelo Art Questions
 const michelangeloQuizData = [
     {
