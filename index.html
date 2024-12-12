@@ -196,11 +196,43 @@
                     </div>
                 </div>
                 <div class="model-container" id="moses">
-                   <model-viewer alt="Moses" 
-                            src="./models/Moses.glb" 
-                            poster="poster.webp" shadow-intensity="1" 
-                            camera-controls touch-action="pan-y">
-                        </model-viewer>
+                  <model-viewer alt="Moses" 
+  src="./models/Moses.glb" 
+  poster="poster.webp" 
+  shadow-intensity="1" 
+  camera-controls 
+  touch-action="pan-y" 
+  ar 
+  ar-modes="webxr scene-viewer quick-look">
+  
+  <!-- Hotspots -->
+  <button class="Hotspot" slot="hotspot-1" 
+          data-position="-0.9016070712078166m 10.500141056645404m -1.1563834590004465m" 
+          data-normal="0.05078665263491629m 0.08779158097391909m 0.9948433817562644m">
+           <div data-img-src="./IMG/moses1.jpg">
+           <div class="hotspot-label">Horn</div>
+  </button>
+  <button class="Hotspot" slot="hotspot-3" 
+          data-position="-1.1188686803298498m 3.935973479218906m -0.18565672157184454m" 
+          data-normal="0.5690765036659331m 0.37067843276969875m 0.7339955261817045m">
+          <div data-img-src="./IMG/moses2.jpg">
+          <div class="hotspot-label">Beard</div>
+      
+  </button>
+  <button class="Hotspot" slot="hotspot-4" 
+          data-position="-3.550953107075621m -1.5600919886247895m 5.224856737808075m" 
+          data-normal="-0.7064337599686745m 0.47170362859230186m 0.52768080271067m">
+            <div data-img-src="./IMG/moses3.jpg">
+           <div class="hotspot-label">Stature</div>
+  </button>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+  </div>
+
+
+</model-viewer>
                 </div>
             </div>
             <div class="image-gallery">
