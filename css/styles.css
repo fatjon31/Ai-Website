@@ -34,7 +34,7 @@
 
 /* Enhanced Base Styles */
 body {
-  background: linear-gradient(135deg, var(--dark), #2a2a2a);
+  background: linear-gradient(135deg, var(--dark), #8e26dd);
   color: var(--light);
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
@@ -121,7 +121,6 @@ body {
     color: white;
     padding-top: 60px;
     position: relative;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     overflow: hidden;
 }
 
