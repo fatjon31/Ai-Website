@@ -9,6 +9,15 @@ document.querySelectorAll('.Hotspot').forEach(hotspot => {
         if (targetImage) {
             // Scroll the image into view smoothly
             targetImage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Add highlight border after scrolling
+            setTimeout(() => {
+                // Remove the highlight from all images
+                document.querySelectorAll('.image-gallery img').forEach(img => img.classList.remove('highlight'));
+
+                // Add the highlight to the clicked image
+                targetImage.classList.add('highlight');
+            }, 500); // Adjust the delay as needed to ensure scrolling is complete
         } else {
             console.error(`No image found for source: ${imgSrc}`);
         }
